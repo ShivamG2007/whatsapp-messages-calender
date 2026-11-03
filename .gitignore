@@ -1,0 +1,49 @@
+# Secrets and environment
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+secrets/
+credentials/
+
+# Personal data: chats, tokens, databases, training exports
+data/*
+!data/.gitkeep
+config/selected_chats.json
+listener/.wwebjs_auth/
+listener/.wwebjs_cache/
+listener/.state.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# Training outputs (big files)
+saves/
+*.gguf
+*.safetensors
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log

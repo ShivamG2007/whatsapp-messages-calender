@@ -1,0 +1,21 @@
+{
+  "name": "whatsapp-to-calendar-listener",
+  "version": "0.1.0",
+  "description": "Read-only WhatsApp listener that forwards messages from selected chats to the local brain",
+  "main": "src/index.js",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "pick": "node src/pickChats.js",
+    "test": "node --test",
+    "check": "node --check src/index.js && node --check src/pickChats.js && node --check src/bridge.js && node --check src/filters.js && node --check src/client.js"
+  },
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.7"
+  }
+}

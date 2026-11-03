@@ -1,0 +1,6 @@
+{
+  "chats": [
+    { "id": "120363000000000000@g.us", "name": "Dance group", "is_group": true },
+    { "id": "120363000000000001@g.us", "name": "LEAP core team", "is_group": true }
+  ]
+}

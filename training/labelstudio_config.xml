@@ -1,0 +1,37 @@
+<View>
+  <Header value="Group: $chat_name   |   sent: $sent_at   |   by: $sender" size="5"/>
+
+  <Header value="Earlier messages (context)" size="6"/>
+  <Text name="context" value="$context"/>
+
+  <Header value="Events the bot already had in the calendar" size="6"/>
+  <Text name="candidates" value="$candidates"/>
+
+  <Header value="New message: label THIS one" size="4"/>
+  <Text name="message" value="$message"/>
+
+  <Header value="What the model answered / what the bot did" size="6"/>
+  <Text name="model_output" value="$model_output"/>
+  <Text name="bot_result" value="$bot_result"/>
+
+  <Header value="Correct answer (pre-filled with the model's answer, fix anything wrong)" size="5"/>
+  <Choices name="action" toName="message" choice="single-radio" showInline="true" required="true">
+    <Choice value="add"/>
+    <Choice value="reschedule"/>
+    <Choice value="cancel"/>
+    <Choice value="none"/>
+  </Choices>
+
+  <Header value="Event title" size="6"/>
+  <TextArea name="event" toName="message" maxSubmissions="1" editable="true" rows="1"/>
+  <Header value="Date words exactly as written (e.g. kal, friday, 5 nov). Empty if not said" size="6"/>
+  <TextArea name="date_text" toName="message" maxSubmissions="1" editable="true" rows="1"/>
+  <Header value="Time words exactly as written (e.g. 7pm, shaam 6, 6-8pm). Empty if not said" size="6"/>
+  <TextArea name="time_text" toName="message" maxSubmissions="1" editable="true" rows="1"/>
+  <Header value="Separate end time, only if given" size="6"/>
+  <TextArea name="end_time_text" toName="message" maxSubmissions="1" editable="true" rows="1"/>
+  <Header value="Place" size="6"/>
+  <TextArea name="place" toName="message" maxSubmissions="1" editable="true" rows="1"/>
+  <Header value="Target: number of the matching event above for reschedule/cancel, else 0" size="6"/>
+  <Number name="target" toName="message" min="0" max="10"/>
+</View>
